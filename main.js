@@ -1,4 +1,4 @@
-let totalNoobs = localStorage.getItem('totalNoobs') ? parseInt(localStorage.getItem('counterValue')) : 0;
+let totalNoobs = localStorage.getItem('totalNoobs') ? parseInt(localStorage.getItem('totalNoobs')) : 0;
 
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementById('noob-button');
