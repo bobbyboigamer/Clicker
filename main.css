@@ -1,3 +1,7 @@
+html {
+    background-color: #191919;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -20,13 +24,30 @@ body {
     transform: translateX(-50%);
     font-family: Arial, sans-serif;
     font-size: 48px;
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.9);
+    color: #ffffff;
     padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .counter {
     text-align: center;
+}
+
+.plus-one {
+    position: absolute;
+    font-size: 30px;
+    color: #ffffff;
+    opacity: 1;
+    animation: float-up 1s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
 }
