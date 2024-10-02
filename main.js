@@ -1,5 +1,17 @@
 let totalNoobs = localStorage.getItem('totalNoobs') ? parseInt(localStorage.getItem('totalNoobs')) : 0;
 
+function updateTabTitle() {
+    const currentTitle = document.title;
+    const parts = currentTitle.split('-');
+    const noobsCount = parseInt(parts[0]);
+    const appName = parts[1];
+    
+    const newTitle = `${totalNoobs} Noobs - Noob Clicker`;
+    document.title = newTitle;
+}
+
+updateTabTitle();
+
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementById('noob-button');
     const counterElement = document.querySelector('.counter');
@@ -9,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('click', function(event) {
         totalNoobs++;
         counterElement.textContent = totalNoobs + " Noobs";
+
+        updateTabTitle();
 
         localStorage.setItem('totalNoobs', totalNoobs);
 

@@ -32,6 +32,21 @@ body {
     text-align: center;
 }
 
+.nps-container {
+    position: fixed;
+    top: 80px; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Arial, sans-serif;
+    font-size: 24px; 
+    color: #cccccc;
+    padding: 5px 10px;
+}
+
+.nps {
+    text-align: center;
+}
+
 .plus-one {
     position: absolute;
     font-size: 30px;
